@@ -1,4 +1,4 @@
-import {SET_COUNTER, INCREMENT_COUNTER, DECREMENT_COUNTER} from './counterTypes';
+import {SET_COUNTER, INCREMENT_COUNTER, DECREMENT_COUNTER, RESET_COUNTER} from './counterTypes';
 
 export function setCounter(counter) {
   return {
@@ -37,4 +37,10 @@ export function incrementAsync(delay = 1000) {
       dispatch(increment());
     }, delay);
   };
+}
+
+export function resetCounter() {
+  return {
+    type: RESET_COUNTER
+  }
 }
